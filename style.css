@@ -1,8 +1,12 @@
+/* FindMyBorough V1 Stylesheet */
+
 /* Show it is fixed to the top */
 body {
   min-height: 75rem;
   padding-top: 4.5rem;
 }
+
+/* START NAVBAR */
 
 #navbar {
   background-color: #FFFFFF;
@@ -24,6 +28,10 @@ body {
 .nav-icon {
   max-width: 25px;
 }
+
+/* END NAVBAR */
+
+/* START JUMBO */
 
 #jumbotron {
   background-image: url(img/jumbotron.jpg);
@@ -58,6 +66,10 @@ body {
 #jumbotron-inputs .container {
   padding: 50%;
 }
+
+/* END JUMBO */
+
+/* START GENERAL */
 
 #banner {
   background-color: #E55151;
@@ -101,14 +113,6 @@ button.next-button {
   color: #FFFFFF;
 } 
 
-.ui-draggable, .ui-droppable {
-  background-position: top;
-}
-
-.footer-logo {
-  max-width: 100px;
-}
-
 ul.borough-benefits {
   list-style-type: none;
 }
@@ -117,17 +121,12 @@ li.borough-benefits {
   font-size: 24px;
 }
 
-ul.connectedSortable {
-  display:  block;
-}
+/* END GENERAL */
 
-li.ui-state-default {
-  background-color: #E55151;
-  padding: 5px;
-  border-radius: 20px;
-  min-width: 100%;
-  max-width: 100% !important;
-  align-items: center;
+/* START ORDER LIST */
+
+.ui-draggable, .ui-droppable {
+  background-position: top;
 }
 
 #sortable1, #sortable2 {
@@ -143,3 +142,55 @@ li.ui-state-default {
     width: 120px;
   }
 
+ul.connectedSortable {
+  display:  block;
+}
+
+li.ui-state-default {
+  background-color: #E55151;
+  padding: 5px;
+  border-radius: 20px;
+  min-width: 100%;
+  max-width: 100% !important;
+  align-items: center;
+}
+
+/* END ORDER LIST */
+
+/* Team */
+.team-container {
+    background: #e8cbc0;
+    background: -webkit-linear-gradient(to right, #E55151, #636fa4);
+    background: linear-gradient(to right, #E55151, #636fa4);
+    min-height: 100vh;
+}
+
+.social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.social-link:hover, .social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: #555;
+}
+
+/* End Team */
+
+
+/* FOOTER */ 
+
+.footer-logo {
+  max-width: 100px;
+}
+
+/* END FOOTER */
