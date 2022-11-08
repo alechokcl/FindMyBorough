@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>FindMyBorough! - Result</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-fixed/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+
+    <script>
+        function goPython(){
+            $.ajax({
+              url: "MYSCRIPT.py",
+             context: document.body
+            }).done(function() {
+             alert('finished python script');;
+            });
+        }
+    </script>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+
+  </head>
+  <body>
+    
+<nav class="navbar navbar-expand-md navbar-ligh fixed-top" id="navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"><img class="logo-main" src="img/logo.png" /></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+      <ul class="navbar-nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html"><img class="nav-icon" src="img/home.png" /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img class="nav-icon" src="img/search.png" /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"><img class="nav-icon" src="img/community.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<center>
+<main>
+
+  <div class="position-relative overflow-hidden text-center banner-sub">
+      <div class="col-md-5 mx-auto my-5">
+        <h1 class="display-16 fw-normal">Our suggestion is:<br>GREENWICH</h1>
+      </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+
+  <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-light" id="jumbotron-inputs" style="background-image: url(img/greenwich.jpg);">
+      <div class="mx-auto my-5">
+        <!-- TEXT GOES HERE -->
+
+          <h1 class="display-5 fw-normal">We love Greenwich for:</h1>
+          <p class="lead fw-normal">
+            <ul class="borough-benefits">
+              <li class="borough-benefits"=>Green Space</li>
+              <li class="borough-benefits">Low Crime</li>
+              <li class="borough-benefits">Great Restaurants!</li>
+            </ul>
+          </p>
+          
+
+          <!-- Next button -->
+
+
+
+          <!-- Next button end -->
+
+        <!-- END INPUT -->
+      </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+
+<!--Properties -->
+  <!-- Preload fonts used by the widget -->
+            <link rel="preload" href="https://crystalroof.co.uk/widgets/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+            <link rel="preload" href="https://crystalroof.co.uk/widgets/inter-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+            <link rel="preload" href="https://crystalroof.co.uk/widgets/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+            <link rel="preload" href="https://crystalroof.co.uk/widgets/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+
+            <!-- Element where the widget will be embedded -->
+            <div id="location-highlights-widget"/>
+
+            <!-- CSS classes used by the widget -->
+            <link rel="stylesheet" href="https://crystalroof.co.uk/widgets/style.css" />
+
+            <!-- Create instance of the Location Highlights widget when widgets library loaded -->
+            <script>
+            function initWidget() {
+              var widget = new CrystalRoof.Widgets.LocationHighlights("location-highlights-widget", {
+                version: '0.0.1',
+                location: 'SE10 0AA'
+            });
+            }
+            </script>
+
+            <!-- Load Crystal Roof Widget library asynchronously -->
+            <script defer src="https://crystalroof.co.uk/widgets/widgets.js?features=highlights&key=DEMO&callback=initWidget"></script>
+<!-- End Properties -->
+
+</main>
+</center>
+
+<footer class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <img src="img/logo.png" class="footer-logo"/>
+      <small class="d-block mb-3 text-muted">&copy; 2022</small>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Info</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="budget.html">Find your borough</a></li>
+        <li><a class="link-secondary" href="advertise.html">Advertise with us</a></li>
+        <li><a class="link-secondary" href="team.html">Team</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="attributions.html">Attributions</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
