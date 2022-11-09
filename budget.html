@@ -96,7 +96,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text">£</span>
             </div>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <input id="budget" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
             <div class="input-group-append">
               <span class="input-group-text">per month</span>
             </div>
@@ -104,7 +104,7 @@
 
           <!-- Next button -->
 
-          <a href="ranking.html"><button type="button" class="btn next-button">Next</button></a>
+          <button type="button" class="btn next-button" onclick="saveBudget()">Next</button>
 
           <!-- Next button end -->
 
@@ -142,6 +142,17 @@
 </footer>
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Set the budget to a variable locally in the browser -->
+    <script>
+    function saveBudget() {
+    // set the variable to the id budget from the above input
+    var budget=document.getElementById("budget").value;
+    sessionStorage.setItem("budget", budget);
+    // redirect
+    window.location.href = "ranking.html";
+    }
+    </script>
 
       
   </body>

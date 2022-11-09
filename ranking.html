@@ -57,7 +57,7 @@
     
   <nav class="navbar navbar-expand-md navbar-light fixed-top" id="navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img class="logo-main" src="img/logo.png" /></a>
+      <a class="navbar-brand" href="index.html"><img class="logo-main" src="img/logo.png" /></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -93,16 +93,16 @@
           <!-- INPUT GOES HERE -->
 
            <ul id="sortable1" class="connectedSortable">
-              <li class="ui-state-default">Green Spaces</li>
-              <li class="ui-state-default">Crime Rate</li>
-              <li class="ui-state-default">Restaurants</li>
-              <li class="ui-state-default">Schools</li>
-              <li class="ui-state-default">Transport Links</li>
+              <li id="1" class="ui-state-default">Green Spaces</li>
+              <li id="2" class="ui-state-default">Crime Rate</li>
+              <li id="3" class="ui-state-default">Restaurants</li>
+              <li id="4" class="ui-state-default">Schools</li>
+              <li id="5" class="ui-state-default">Transport Links</li>
           </ul>
           <br>
             <!-- Next button -->
 
-            <a href="genericBoroughResult.html"><button type="button" class="btn next-button">FindMyBorough!</button></a>
+            <a href="genericBoroughResult.html"><button type="button" class="btn next-button" onclick="saveRanking()">FindMyBorough!</button></a>
 
             <!-- Next button end -->
 
@@ -111,8 +111,6 @@
       <div class="product-device shadow-sm d-none d-md-block"></div>
       <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
     </div>
-
-
   </main>
   </center>
 
@@ -158,6 +156,35 @@
         }).disableSelection();
       } );
   </script>
+
+  <!-- Import the budget locally from the browser -->
+  <script>
+    // get the budget from the browser storage
+    let budget = sessionStorage.getItem("budget");
+    document.getElementById('budget').innerHTML = budget;
+
+    // if the budget cannot be found locally in the browser then the user will be redirected to the budget page
+      if(budget == null){
+      alert('You did not set a budget yet, you must do that first! You will now be redirected to the budget page where you can set a budget.');
+      window.location.href = "budget.html";
+    } 
+  </script>
+
+  <!-- Convert the ranked factors into a Javascript Array -->
+  <script>
+
+    function saveRanking() {    
+    let sortable1 = document.querySelectorAll("#sortable1 li"),ranking = [];
+    sortable1.forEach((e)=> ranking.push(e.id))
+
+    console.log(ranking)
+
+    sessionStorage.setItem("ranking", ranking);
+    }
+
+  </script>
+
+  
 
   </body>
 </html>
