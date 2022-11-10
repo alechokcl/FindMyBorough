@@ -118,6 +118,7 @@ ul.borough-benefits {
 
 li.borough-benefits {
   font-size: 24px;
+  color: white;
 }
 
 input.form-range{
@@ -137,6 +138,10 @@ label.selectorlabel {
 }
 
 .results-page {
+  color: white!important;
+}
+
+h1, li.borough {
   color: white!important;
 }
 

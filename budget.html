@@ -19,10 +19,6 @@
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
 
-    <!-- PyScript -->
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-
   </head>
   <body>
   <body>
@@ -124,22 +120,25 @@
 </footer>
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
 
     <!-- Set the budget to a variable locally in the browser -->
-    <script>
+    <script type="text/javascript">
     function saveBudget() {
-    // set the variable to the id budget from the above input
-    var budget=document.getElementById("budget").value;
-    sessionStorage.setItem("budget", budget);
-    console.log bedrooms(budget)
 
-    // set the variable to the id bedrooms from the above input
-    var bedrooms=document.getElementById("floatingSelect").value;
-    sessionStorage.setItem("bedrooms", bedrooms);
-    console.log(bedrooms);
+      // set the variable to the id budget from the above input
+      var budget=document.getElementById("budget").value;
+      sessionStorage.setItem("budget", budget);
+      console.log(budget);
 
-    // redirect
-    window.location.href = "ranking.html";
+      // set the variable to the id bedrooms from the above input
+      var bedrooms=document.getElementById("floatingSelect").value;
+      sessionStorage.setItem("bedrooms", bedrooms);
+      console.log(bedrooms);
+
+      // redirect
+      window.location.href = "ranking.html";
     }
     </script>
 
