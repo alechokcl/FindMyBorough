@@ -136,6 +136,10 @@ label.selectorlabel {
   padding-bottom: 20px;
 }
 
+.results-page {
+  color: white!important;
+}
+
 /* END GENERAL */
 
 /* START ORDER LIST */
