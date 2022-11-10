@@ -134,6 +134,13 @@
     // get the budget from the browser storage
     let budget = sessionStorage.getItem("budget");
     document.getElementById('budget').innerHTML = budget;
+    console.log(budget);
+
+    // get the bedrooms from the browser storage
+    let budget = sessionStorage.getItem("bedrooms");
+    document.getElementById('bedrooms').innerHTML = bedrooms;
+    console.log(bedrooms);
+
 
     // if the budget cannot be found locally in the browser then the user will be redirected to the budget page
       if(budget == null){

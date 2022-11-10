@@ -131,10 +131,12 @@
     // set the variable to the id budget from the above input
     var budget=document.getElementById("budget").value;
     sessionStorage.setItem("budget", budget);
+    console.log bedrooms(budget)
 
     // set the variable to the id bedrooms from the above input
     var bedrooms=document.getElementById("floatingSelect").value;
     sessionStorage.setItem("bedrooms", bedrooms);
+    console.log(bedrooms);
 
     // redirect
     window.location.href = "ranking.html";
