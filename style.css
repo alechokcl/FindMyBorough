@@ -47,7 +47,6 @@ body {
   background-size: cover;
   margin: 0;
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
-  color:  #FFFFFF;
 }
 
 #jumbotron-inputs-2 {
@@ -119,6 +118,22 @@ ul.borough-benefits {
 
 li.borough-benefits {
   font-size: 24px;
+}
+
+input.form-range{
+  border: none;
+}
+
+.customRange2 {
+  border: none;
+}
+
+label.selectorlabel {
+  color: black!important;
+}
+
+.form-floating {
+  padding-bottom: 20px;
 }
 
 /* END GENERAL */
