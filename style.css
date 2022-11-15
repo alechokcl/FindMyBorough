@@ -88,6 +88,11 @@ body {
   background-color: #E55151;
 }
 
+.right-feature {
+  background-color: #1a1a1a;
+  color: #FFFFFF;
+}
+
 .intro-icon {
   max-width: 80%;
 }
