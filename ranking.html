@@ -73,11 +73,11 @@
           <!-- INPUT GOES HERE -->
 
           <ul id="sortable-list-mob" class="list-group unstyled">
-              <li class="ui-state-default">Crime Rate</li>
-              <li class="ui-state-default">Green Spaces</li>
-              <li class="ui-state-default">Restaurants</li>
-              <li class="ui-state-default">Schools</li>
-              <li class="ui-state-default">Transport Links</li>
+              <li id="1" class="ui-state-default">Crime Rate</li>
+              <li id="2" class="ui-state-default">Green Spaces</li>
+              <li id="3" class="ui-state-default">Restaurants</li>
+              <li id="4" class="ui-state-default">Schools</li>
+              <li id="5" class="ui-state-default">Transport Links</li>
           </ul>
 
           <!-- OLD SORTABLEå
@@ -155,23 +155,37 @@
     console.log(budget);
 
     // get the bedrooms from the browser storage
-    let budget = sessionStorage.getItem("bedrooms");
+    let bedrooms = sessionStorage.getItem("bedrooms");
     document.getElementById('bedrooms').innerHTML = bedrooms;
     console.log(bedrooms);
+  </script>
 
+  <script>
 
     // if the budget cannot be found locally in the browser then the user will be redirected to the budget page
       if(budget == null){
       alert('You did not set a budget yet, you must do that first! You will now be redirected to the budget page where you can set a budget.');
       window.location.href = "budget.html";
-    } 
+    }
+
+    // if a negative budget is entered, redirect
+      if(budget < 0){
+      alert('You can\'t have a negative budget, please enter a budget greater than 0');
+      window.location.href = "budget.html";
+    }
+
+    // if the budget is not numeric then redirect back to the budget page
+      if(typeof budget != numeric) {
+        alert('Your entered budget is not numeric, please enter your budget again!');
+        window.location.href = "budget.html";
+      } 
   </script>
 
   <!-- Convert the ranked factors into a Javascript Array -->
   <script>
 
     function saveRanking() {    
-    let sortable1 = document.querySelectorAll("#sortable1 li"),ranking = [];
+    let sortable1 = document.querySelectorAll("#sortable-list-mob li"),ranking = [];
     sortable1.forEach((e)=> ranking.push(e.id))
 
     console.log(ranking)
