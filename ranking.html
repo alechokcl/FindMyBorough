@@ -19,6 +19,11 @@
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
 
+    <!-- Sortable Javascript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+
     <!-- PyScript -->
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
@@ -64,13 +69,23 @@
         <div class="col-md-5 p-lg-5 mx-auto my-5">
           <!-- INPUT GOES HERE -->
 
+          <ul id="sortable-list-mob" class="list-group unstyled">
+              <li class="ui-state-default">Crime Rate</li>
+              <li class="ui-state-default">Green Spaces</li>
+              <li class="ui-state-default">Restaurants</li>
+              <li class="ui-state-default">Schools</li>
+              <li class="ui-state-default">Transport Links</li>
+          </ul>
+
+          <!-- OLD SORTABLEå
            <ul id="sortable1" class="connectedSortable">
-              <li id="1" class="ui-state-default">Green Spaces</li>
-              <li id="2" class="ui-state-default">Crime Rate</li>
+              <li id="1" class="ui-state-default">Crime Rate</li>
+              <li id="2" class="ui-state-default">Green Spaces</li>
               <li id="3" class="ui-state-default">Restaurants</li>
               <li id="4" class="ui-state-default">Schools</li>
               <li id="5" class="ui-state-default">Transport Links</li>
           </ul>
+           END OLD SORTABLE -->
           <br>
             <!-- Next button -->
 
@@ -161,6 +176,22 @@
     sessionStorage.setItem("ranking", ranking);
     }
 
+  </script>
+
+  <script>
+        new Sortable(document.getElementById('sortable-list-mob'), {
+            animation: 150,
+            ghostClass: 'background-class'
+        });
+        $('#get-order').click(function(){
+            const items = document.querySelectorAll('li');
+            const inTexts = [];
+            for(var i = 0;i<items.length;i++){
+                inTexts.push($(items[i]).text());
+            }
+            alert(inTexts);
+        })
+    </script>
   </script>
 
   
