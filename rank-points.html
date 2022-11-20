@@ -26,11 +26,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 
-
-    <!-- PyScript -->
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-
   </head>
   <body>
   <body>
@@ -72,23 +67,91 @@
         <div class="col-md-5 p-lg-5 mx-auto my-5">
           <!-- INPUT GOES HERE -->
 
-          <ul id="sortable-list-mob" class="list-group unstyled">
-              <li id="1" class="ui-state-default">Crime Rate</li>
-              <li id="2" class="ui-state-default">Green Spaces</li>
-              <li id="3" class="ui-state-default">Restaurants</li>
-              <li id="4" class="ui-state-default">Schools</li>
-              <li id="5" class="ui-state-default">Transport Links</li>
-          </ul>
+          <div class="form-floating">
+          <select class="form-select" id="selectPref1" aria-label="Floating label select example">
+            <option selected>Select..</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+          </select>
+          <label for="floatingSelect" class="selectorLabel">Green Space</label>
+           </div>
 
-          <!-- OLD SORTABLEå
-           <ul id="sortable1" class="connectedSortable">
-              <li id="1" class="ui-state-default">Crime Rate</li>
-              <li id="2" class="ui-state-default">Green Spaces</li>
-              <li id="3" class="ui-state-default">Restaurants</li>
-              <li id="4" class="ui-state-default">Schools</li>
-              <li id="5" class="ui-state-default">Transport Links</li>
-          </ul>
-           END OLD SORTABLE -->
+           <div class="form-floating">
+          <select class="form-select" id="selectPref2" aria-label="Floating label select example">
+            <option selected>Select..</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+          </select>
+          <label for="floatingSelect" class="selectorLabel">Transport Links</label>
+           </div>
+
+           <div class="form-floating">
+          <select class="form-select" id="selectPref3" aria-label="Floating label select example">
+            <option selected>Select..</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+          </select>
+          <label for="floatingSelect" class="selectorLabel">Crime Levels</label>
+           </div>
+
+           <div class="form-floating">
+          <select class="form-select" id="selectPref4" aria-label="Floating label select example">
+            <option selected>Select..</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+          </select>
+          <label for="floatingSelect" class="selectorLabel">Number of Schools</label>
+           </div>
+
+           <div class="form-floating">
+          <select class="form-select" id="selectPref5" aria-label="Floating label select example">
+            <option selected>Select..</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+          </select>
+          <label for="floatingSelect" class="selectorLabel">Number of pubs</label>
+           </div>
+
+           <div class="form-floating">
+          <select class="form-select" id="selectPref6" aria-label="Floating label select example">
+            <option selected>Select..</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+          </select>
+          <label for="floatingSelect" class="selectorLabel">Wellbeing Score</label>
+           </div>
+
+           <div class="form-floating">
+          <select class="form-select" id="selectPref7" aria-label="Floating label select example">
+            <option selected>Select..</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+          </select>
+          <label for="floatingSelect" class="selectorLabel">Number of Restaurants</label>
+           </div>
+
+          
           <br>
             <!-- Next button -->
 
@@ -184,16 +247,31 @@
   <!-- Convert the ranked factors into a Javascript Array -->
   <script>
 
-    function saveRanking() {    
-    let sortable1 = document.querySelectorAll("#sortable-list-mob li"),ranking = [];
-    sortable1.forEach((e)=> ranking.push(e.id))
+  function saveRanking() {
+      var pref1=document.getElementById("selectPref1").value;
+      sessionStorage.setItem("pref1", pref1);
+      var pref2=document.getElementById("selectPref2").value;
+      sessionStorage.setItem("pref2", pref1);
+      var pref3=document.getElementById("selectPref3").value;
+      sessionStorage.setItem("pref3", pref1);
+      var pref4=document.getElementById("selectPref4").value;
+      sessionStorage.setItem("pref4", pref1);
+      var pref5=document.getElementById("selectPref5").value;
+      sessionStorage.setItem("pref5", pref1);
+      var pref6=document.getElementById("selectPref6").value;
+      sessionStorage.setItem("pref6", pref1);
+      var pref7=document.getElementById("selectPref7").value;
+      sessionStorage.setItem("pref7", pref1);
 
-    console.log(ranking)
+      pref_list = [pref1,pref2,pref3,pref4,pref5,pref6,pref7]
 
-    sessionStorage.setItem("ranking", ranking);
+      var pref_list = pref_list
+      sessionStorage.setItem("pref_list", pref_list);
 
-    window.location.href = 'processing.html';
-    }
+       // redirect
+      window.location.href = "processing.html";
+
+  }
 
   </script>
 

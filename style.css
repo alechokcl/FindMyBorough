@@ -185,6 +185,10 @@ li.ui-state-default {
   margin: 0 5px 5px 5px;
 }
 
+label.selectorLabel {
+  color: #000000;
+}
+
 #sortable-list-mob {
   list-style-type: none;
 }

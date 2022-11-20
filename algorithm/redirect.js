@@ -1,4 +1,4 @@
-let var borough = sessionStorage.getItem("budget");
+
 
 /* List of London Boroughs
 
@@ -38,139 +38,145 @@ Wandsworth
 
 */
 
-if borough == "Barking and Dagenham" {
-	window.location.href = "../boroughs/barkinganddagenham.html";
-}
+function redirectUser() {
 
-if borough == "Barnet" {
-	window.location.href = "../boroughs/barnet.html";
-}
+borough = PyScript.globals.get('borough')
 
-if borough == "Bexley" {
-	window.location.href = "../boroughs/bexley.html";
-}
+	if borough == "Barking and Dagenham" {
+		window.location.href = "../boroughs/barkinganddagenham.html";
+	}
 
-if borough == "Brent" {
-	window.location.href = "../boroughs/brent.html";
-}
+	if borough == "Barnet" {
+		window.location.href = "../boroughs/barnet.html";
+	}
 
-if borough == "Bromley" {
-	window.location.href = "../boroughs/bromley.html";
-}
+	if borough == "Bexley" {
+		window.location.href = "../boroughs/bexley.html";
+	}
 
-if borough == "Camden" {
-	window.location.href = "../boroughs/camden.html";
-}
+	if borough == "Brent" {
+		window.location.href = "../boroughs/brent.html";
+	}
 
-if borough == "City of London" {
-	window.location.href = "../boroughs/city.html";
-}
+	if borough == "Bromley" {
+		window.location.href = "../boroughs/bromley.html";
+	}
 
-if borough == "City of Westminster" {
-	window.location.href = "../boroughs/westminister.html";
-}
+	if borough == "Camden" {
+		window.location.href = "../boroughs/camden.html";
+	}
 
-if borough == "Croydon" {
-	window.location.href = "../boroughs/croydon.html";
-}
+	if borough == "City of London" {
+		window.location.href = "../boroughs/city.html";
+	}
 
-if borough == "Ealing" {
-	window.location.href = "../boroughs/ealing.html";
-}
+	if borough == "Westminster" {
+		window.location.href = "../boroughs/westminister.html";
+	}
 
-if borough == "Enfield" {
-	window.location.href = "../boroughs/enfield.html";
-}
+	if borough == "Croydon" {
+		window.location.href = "../boroughs/croydon.html";
+	}
 
-if borough == "Greenwich" {
-	window.location.href = "../boroughs/greenwich.html";
-}
+	if borough == "Ealing" {
+		window.location.href = "../boroughs/ealing.html";
+	}
 
-if borough == "Hackney" {
-	window.location.href = "../boroughs/hackney.html";
-}
+	if borough == "Enfield" {
+		window.location.href = "../boroughs/enfield.html";
+	}
 
-if borough == "Hammersmith and Fulham" {
-	window.location.href = "../boroughs/hammersmith.html";
-}
+	if borough == "Greenwich" {
+		window.location.href = "../boroughs/greenwich.html";
+	}
 
-if borough == "Haringey" {
-	window.location.href = "../boroughs/haringey.html";
-}
+	if borough == "Hackney" {
+		window.location.href = "../boroughs/hackney.html";
+	}
 
-if borough == "Harrow" {
-	window.location.href = "../boroughs/harrow.html";
-}
+	if borough == "Hammersmith and Fulham" {
+		window.location.href = "../boroughs/hammersmith.html";
+	}
 
-if borough == "Havering" {
-	window.location.href = "../boroughs/havering.html";
-}
+	if borough == "Haringey" {
+		window.location.href = "../boroughs/haringey.html";
+	}
 
-if borough == "Hillingdon" {
-	window.location.href = "../boroughs/hillingdon.html";
-}
+	if borough == "Harrow" {
+		window.location.href = "../boroughs/harrow.html";
+	}
 
-if borough == "Hounslow" {
-	window.location.href = "../boroughs/hounslow.html";
-}
+	if borough == "Havering" {
+		window.location.href = "../boroughs/havering.html";
+	}
 
-if borough == "Islington" {
-	window.location.href = "../boroughs/islington.html";
-}
+	if borough == "Hillingdon" {
+		window.location.href = "../boroughs/hillingdon.html";
+	}
 
-if borough == "Kensington and Chelsea" {
-	window.location.href = "../boroughs/kensington.html";
-}
+	if borough == "Hounslow" {
+		window.location.href = "../boroughs/hounslow.html";
+	}
 
-if borough == "Kingston upon Thames" {
-	window.location.href = "../boroughs/kingston.html";
-}
+	if borough == "Islington" {
+		window.location.href = "../boroughs/islington.html";
+	}
 
-if borough == "Lambeth" {
-	window.location.href = "l../boroughs/lambeth.html";
-}
+	if borough == "Kensington and Chelsea" {
+		window.location.href = "../boroughs/kensington.html";
+	}
 
-if borough == "Lewisham" {
-	window.location.href = "../boroughs/lewisham.html";
-}
+	if borough == "Kingston upon Thames" {
+		window.location.href = "../boroughs/kingston.html";
+	}
 
-if borough == "Merton" {
-	window.location.href = "../boroughs/merton.html";
-}
+	if borough == "Lambeth" {
+		window.location.href = "l../boroughs/lambeth.html";
+	}
 
-if borough == "Newham" {
-	window.location.href = "../boroughs/newham.html";
-}
+	if borough == "Lewisham" {
+		window.location.href = "../boroughs/lewisham.html";
+	}
 
-if borough == "Redbridge" {
-	window.location.href = "../boroughs/redbridge.html";
-}
+	if borough == "Merton" {
+		window.location.href = "../boroughs/merton.html";
+	}
 
-if borough == "Richmond" {
-	window.location.href = "../boroughs/richmond.html";
-}
+	if borough == "Newham" {
+		window.location.href = "../boroughs/newham.html";
+	}
 
-if borough == "Southwark" {
-	window.location.href = "../boroughs/southwark.html";
-}
+	if borough == "Redbridge" {
+		window.location.href = "../boroughs/redbridge.html";
+	}
 
-if borough == "Sutton" {
-	window.location.href = "../boroughs/sutton.html";
-}
+	if borough == "Richmond" {
+		window.location.href = "../boroughs/richmond.html";
+	}
 
-if borough == "Tower Hamlets" {
-	window.location.href = "../boroughs/tower.html";
-}
+	if borough == "Southwark" {
+		window.location.href = "../boroughs/southwark.html";
+	}
 
-if borough == "Waltham Forest" {
-	window.location.href = "../boroughs/waltham.html";
-}
+	if borough == "Sutton" {
+		window.location.href = "../boroughs/sutton.html";
+	}
 
-if borough == "Wandsworth" {
-	window.location.href = "../boroughs/wandsworth.html";
-}
+	if borough == "Tower Hamlets" {
+		window.location.href = "../boroughs/tower.html";
+	}
 
-else {
-	alert("Apologies, an error has occured, please try again")
-	window.location.href = "../boroughs/index.html";
+	if borough == "Waltham Forest" {
+		window.location.href = "../boroughs/waltham.html";
+	}
+
+	if borough == "Wandsworth" {
+		window.location.href = "../boroughs/wandsworth.html";
+	}
+
+	else {
+		alert("Apologies, an error has occured, please try again")
+		window.location.href = "../boroughs/index.html";
+	}
+
 }

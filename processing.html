@@ -29,11 +29,29 @@
     <py-env>
       - numpy
       - pandas
-      - paths:
-            #- algorithm/algorithm.py
     </py-env>
 
-    <pyscript src="algorithm/algorithm.py"></pyscript>
+    <script>
+    // get the budget from the browser storage
+    var budget = sessionStorage.getItem("budget");
+    console.log(budget)
+
+    // get the ranking from the browser storage
+    var bedrooms = sessionStorage.getItem("bedrooms");
+    console.log(bedrooms)
+
+    // get the bedrooms from the browser storage
+    var pref_list = sessionStorage.getItem("pref_list");
+    console.log(pref_list)
+   </script>
+
+   <py-script>
+
+      from js import budget
+      from js import bedrooms
+      from js import pref_list
+
+  </py-script>
 
   </head>
   <body>
@@ -75,17 +93,19 @@
       <div class="mx-auto my-5">
         <!-- TEXT GOES HERE -->
 
-          <h1 class="display-5 fw-normal borough-result">Loading your suggesion now!</h1>
+          <h1 class="display-5 fw-normal borough-result">Loading your suggestion now!</h1>
           <p class="lead fw-normal">
             
           </p>
+
+          <img src="img/loading.gif" />
+          <!-- Algorithm Python -->
+          <script src="algorithm/redirect.js"></script>
+          <py-script src="algorithm/algorithm.py"></py-script>
+
+          <script src="algorithm/redirect.js"></script>
+
           
-
-          <!-- Next button -->
-
-
-
-          <!-- Next button end -->
 
         <!-- END INPUT -->
       </div>
@@ -119,31 +139,8 @@
   </div>
 </footer>
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> 
 
-    <script>
-    // get the budget from the browser storage
-    let budget = sessionStorage.getItem("budget");
-    console.log(budget)
-
-    // get the ranking from the browser storage
-    let ranking = sessionStorage.getItem("ranking");
-    console.log(ranking)
-
-    // get the bedrooms from the browser storage
-    let bedrooms = sessionStorage.getItem("bedrooms");
-    console.log(bedrooms)
-   </script>
-
-  <pyscript>
-
-    from js import budget, ranking, bedrooms
-
-    print(budget)
-    print(bedrooms)
-    print(ranking)
-
-  </pyscript>
 
       
   </body>
