@@ -13,6 +13,7 @@ from pyodide.http import open_url
 from js import budget
 from js import bedrooms
 from js import pref_list
+from js import window
 
 import pandas as pd
 import numpy as np
@@ -29,6 +30,16 @@ pref_list = pref_list.split(",")
 customer_budget = int(budget)
 customer_home_preference = int(bedrooms)
 point_list = pref_list
+
+# error handling for missing variables
+if customer_budget is None:
+  window.location.href = "budget.html"
+
+if customer_home_preference is None:
+  window.location.href = "budget.html"
+
+if point_list is None:
+  window.location.href = "rank-points.html"
 
 print(type(pref_list))
 
