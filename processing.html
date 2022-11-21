@@ -45,6 +45,34 @@
     console.log(pref_list)
    </script>
 
+   <script>
+    // error handling for missing JS variables
+
+    // if the budget cannot be found locally in the browser then the user will be redirected to the budget page
+      if(budget == null){
+      alert('You did not set a budget yet, you must do that first! You will now be redirected to the budget page where you can set a budget.');
+      window.location.href = "budget.html";
+    }
+
+    // if the bedrooms cannot be found locally in the browser then the user will be redirected to the budget page
+      if(bedrooms == null){
+      alert('You did not specify the number of bedrooms, you must do that first! You will now be redirected to the budget page where you can set the bedrooms.');
+      window.location.href = "budget.html";
+    }
+
+    // if a negative budget is entered, redirect
+      if(budget < 0){
+      alert('You can\'t have a negative budget, please enter a budget greater than 0');
+      window.location.href = "budget.html";
+    }
+
+    // if the budget is not numeric then redirect back to the budget page
+      if(typeof budget != numeric) {
+        alert('Your entered budget is not numeric, please enter your budget again!');
+        window.location.href = "budget.html";
+      } 
+  </script>
+
    <py-script>
 
       from js import budget
