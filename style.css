@@ -224,6 +224,20 @@ label.selectorLabel {
 
 /* End Team */
 
+/* Properties */
+
+.property-listing {
+  max-width: 50%;
+  margin: 20px;
+}
+
+.property-listing img {
+  object-fit: cover;
+  max-height: 240px;
+}
+
+/* End Properties */
+
 
 /* FOOTER */ 
 

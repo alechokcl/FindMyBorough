@@ -89,30 +89,15 @@
   </div>
 
 <!--Properties -->
-  <!-- Preload fonts used by the widget -->
-            <link rel="preload" href="https://crystalroof.co.uk/widgets/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-            <link rel="preload" href="https://crystalroof.co.uk/widgets/inter-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-            <link rel="preload" href="https://crystalroof.co.uk/widgets/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-            <link rel="preload" href="https://crystalroof.co.uk/widgets/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-
-            <!-- Element where the widget will be embedded -->
-            <div id="location-highlights-widget"/>
-
-            <!-- CSS classes used by the widget -->
-            <link rel="stylesheet" href="https://crystalroof.co.uk/widgets/style.css" />
-
-            <!-- Create instance of the Location Highlights widget when widgets library loaded -->
-            <script>
-            function initWidget() {
-              var widget = new CrystalRoof.Widgets.LocationHighlights("location-highlights-widget", {
-                version: '0.0.1',
-                location: 'SE10 0AA'
-            });
-            }
-            </script>
-
-            <!-- Load Crystal Roof Widget library asynchronously -->
-            <script defer src="https://crystalroof.co.uk/widgets/widgets.js?features=highlights&key=DEMO&callback=initWidget"></script>
+  <div class="card mb-3 property-listing">
+    <img class="card-img-top" src="../img/home.jpg" alt="Card image cap">
+    <div class="card-body">
+     <h5 class="card-title">Example Rental room in your dream borough</h5>
+      <p class="card-text">Spacious apartment in your ideal location</p>
+      <button type="button" class="btn btn-secondary">Enquiries available soon</button>
+      <p class="card-text"><small class="text-muted">Added 1 day ago</small></p>
+    </div>
+  </div>
 <!-- End Properties -->
 
 </main>
