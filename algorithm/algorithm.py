@@ -16,6 +16,7 @@ from js import pref_list
 from js import window
 from js import alert
 
+import cgi
 import pandas as pd
 import numpy as np
 df= pd.read_csv(open_url("https://raw.githubusercontent.com/alechokcl/findmyborough-dataframe/main/dataframe.csv"))
@@ -51,36 +52,26 @@ if customer_home_preference == 1:
     
     alert("Your budget is too low. Please enter a higher budget (total budget not per room)!")
     window.location.href = "budget.html"
-  else:
-    
-    break
+
 
 elif customer_home_preference == 2:   
   if customer_budget < df['rent_per_month_2bed'].min():
     
     alert("Your budget is too low. Please enter a higher budget (total budget not per room)!")
     window.location.href = "budget.html"
-  else:
-    
-    break
+
 
 elif customer_home_preference == 3:
   if customer_budget < df['rent_per_month_3bed'].min():
     
     alert("Your budget is too low. Please enter a higher budget (total budget not per room)!")
     window.location.href = "budget.html"
-  else:
-    
-    break
 
 elif customer_home_preference == 4:
   if customer_budget < df['rent_per_month_4bed'].min():
     
     alert("Your budget is too low. Please enter a higher budget (total budget not per room)!")
     window.location.href = "budget.html"
-  else:
-    
-    break
 
 #filtering the boroughs according to their average rent to match with user's budget
 if customer_home_preference == 1:
@@ -173,6 +164,15 @@ for i in range(0,3):
 borough = empty_list[0]
 borough2 = empty_list[1]
 borough3 = empty_list[2]
+
+print('<script type="text/javascript">')
+print("var borough_2 = PyScript.globals.get('borough2')")
+print("var borough_3 = PyScript.globals.get('borough3')")
+print('var borough_2 =' + str(borough2) + ';')
+print('var borough_3 =' + str(borough3) + ';')
+print('sessionStorage.setItem("borough_2", borough_2);')
+print('sessionStorage.setItem("borough_3", borough_3);')
+print('</script>')
 
 from js import window
 
@@ -272,6 +272,6 @@ if borough == "Waltham Forest":
 if borough == "Wandsworth":
   window.location.href = "boroughs/wandsworth.html"
 
-if borough == "Westminster":
-  window.location.href = "boroughs/westminster.html"
+#if borough == "Westminster":
+  #window.location.href = "boroughs/westminster.html"
 
