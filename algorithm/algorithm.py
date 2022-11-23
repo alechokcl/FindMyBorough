@@ -46,7 +46,7 @@ print(type(pref_list))
 
 #checking whether entered budget is bigger than or equal to minimum average budget. If not asking user to enter their total budget for a house again.
 checker = True
-while checker == True:
+
   if customer_home_preference == 1:
     if customer_budget < df['rent_per_month_1bed'].min():
       checker = True
