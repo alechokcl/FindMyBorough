@@ -14,6 +14,7 @@ from js import budget
 from js import bedrooms
 from js import pref_list
 from js import window
+from js import alert
 
 import pandas as pd
 import numpy as np
@@ -43,6 +44,46 @@ if point_list is None:
 
 print(type(pref_list))
 
+#checking whether entered budget is bigger than or equal to minimum average budget. If not asking user to enter their total budget for a house again.
+checker = True
+while checker == True:
+  if customer_home_preference == 1:
+    if customer_budget < df['rent_per_month_1bed'].min():
+      checker = True
+      alert("Your budget is too low. Please enter a higher budget (total budget not per room)!")
+      window.location.href = "budget.html"
+    else:
+      checker = False
+      break
+
+  elif customer_home_preference == 2:   
+    if customer_budget < df['rent_per_month_2bed'].min():
+      checker = True
+      alert("Your budget is too low. Please enter a higher budget (total budget not per room)!")
+      window.location.href = "budget.html"
+    else:
+      checker = False
+      break
+
+  elif customer_home_preference == 3:
+    if customer_budget < df['rent_per_month_3bed'].min():
+      checker = True
+      alert("Your budget is too low. Please enter a higher budget (total budget not per room)!")
+      window.location.href = "budget.html"
+    else:
+      checker = False
+      break
+
+  elif customer_home_preference == 4:
+    if customer_budget < df['rent_per_month_4bed'].min():
+      checker = True
+      alert("Your budget is too low. Please enter a higher budget (total budget not per room)!")
+      window.location.href = "budget.html"
+    else:
+      checker = False
+      break
+
+#filtering the boroughs according to their average rent to match with user's budget
 if customer_home_preference == 1:
   df2=df.drop(["rent_per_month_2bed"], axis = 1)
   df2=df2.drop(["rent_per_month_3bed"], axis = 1)
@@ -74,8 +115,11 @@ elif customer_home_preference == 3:
 elif customer_home_preference == 4:
   filtered_customer_list = df2.loc[(df2['rent_per_month_4bed'] <= customer_budget)]
 
+#creating a list with column names 
 columns = df2.columns
 columns = list(columns)
+
+#Dropping all the columns other than variable columns
 columns.remove('Borough')
 if customer_home_preference == 1:
   columns.remove('rent_per_month_1bed')
