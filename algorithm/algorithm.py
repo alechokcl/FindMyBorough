@@ -165,14 +165,17 @@ borough = empty_list[0]
 borough2 = empty_list[1]
 borough3 = empty_list[2]
 
+'''
+print('<html>')
 print('<script type="text/javascript">')
 print("var borough_2 = PyScript.globals.get('borough2')")
 print("var borough_3 = PyScript.globals.get('borough3')")
-print('var borough_2 =' + str(borough2) + ';')
-print('var borough_3 =' + str(borough3) + ';')
+print ('var borough_2 = {{borough2}};'.replace("{{borough2}}", str(borough2)))
 print('sessionStorage.setItem("borough_2", borough_2);')
 print('sessionStorage.setItem("borough_3", borough_3);')
 print('</script>')
+print('</html>')
+'''
 
 from js import window
 
@@ -272,6 +275,6 @@ if borough == "Waltham Forest":
 if borough == "Wandsworth":
   window.location.href = "boroughs/wandsworth.html"
 
-#if borough == "Westminster":
-  #window.location.href = "boroughs/westminster.html"
+if borough == "Westminster":
+  window.location.href = "boroughs/westminster.html"
 
