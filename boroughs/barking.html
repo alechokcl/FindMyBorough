@@ -71,6 +71,8 @@
               <li class="borough-benefits borough-result">Value for money</li>
             </ul>
           </p>
+
+          <p class="lead fw-normal alt-borough">We'd also recommend <span id="borough2"></span> & <span id="borough3"></span></p>
           
 
           <!-- Next button -->
@@ -137,6 +139,16 @@
     // get the bedrooms from the browser storage
     let bedrooms = sessionStorage.getItem("bedrooms");
     console.log(bedrooms)
+
+    // get the other borough from the browser storage
+    let borough_2 = sessionStorage.getItem("borough_2");
+    document.getElementById('borough2').innerHTML = borough_2;
+
+     // get the other borough from the browser storage
+    let borough_3 = sessionStorage.getItem("borough_3");
+    document.getElementById('borough3').innerHTML = borough_3;
+
+
    </script>
 
       

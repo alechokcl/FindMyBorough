@@ -45,43 +45,42 @@ if point_list is None:
 print(type(pref_list))
 
 #checking whether entered budget is bigger than or equal to minimum average budget. If not asking user to enter their total budget for a house again.
-checker = True
 
-  if customer_home_preference == 1:
-    if customer_budget < df['rent_per_month_1bed'].min():
-      checker = True
-      alert("Your budget is too low. Please enter a higher budget (total budget not per room)!")
-      window.location.href = "budget.html"
-    else:
-      checker = False
-      break
+if customer_home_preference == 1:
+  if customer_budget < df['rent_per_month_1bed'].min():
+    
+    alert("Your budget is too low. Please enter a higher budget (total budget not per room)!")
+    window.location.href = "budget.html"
+  else:
+    
+    break
 
-  elif customer_home_preference == 2:   
-    if customer_budget < df['rent_per_month_2bed'].min():
-      checker = True
-      alert("Your budget is too low. Please enter a higher budget (total budget not per room)!")
-      window.location.href = "budget.html"
-    else:
-      checker = False
-      break
+elif customer_home_preference == 2:   
+  if customer_budget < df['rent_per_month_2bed'].min():
+    
+    alert("Your budget is too low. Please enter a higher budget (total budget not per room)!")
+    window.location.href = "budget.html"
+  else:
+    
+    break
 
-  elif customer_home_preference == 3:
-    if customer_budget < df['rent_per_month_3bed'].min():
-      checker = True
-      alert("Your budget is too low. Please enter a higher budget (total budget not per room)!")
-      window.location.href = "budget.html"
-    else:
-      checker = False
-      break
+elif customer_home_preference == 3:
+  if customer_budget < df['rent_per_month_3bed'].min():
+    
+    alert("Your budget is too low. Please enter a higher budget (total budget not per room)!")
+    window.location.href = "budget.html"
+  else:
+    
+    break
 
-  elif customer_home_preference == 4:
-    if customer_budget < df['rent_per_month_4bed'].min():
-      checker = True
-      alert("Your budget is too low. Please enter a higher budget (total budget not per room)!")
-      window.location.href = "budget.html"
-    else:
-      checker = False
-      break
+elif customer_home_preference == 4:
+  if customer_budget < df['rent_per_month_4bed'].min():
+    
+    alert("Your budget is too low. Please enter a higher budget (total budget not per room)!")
+    window.location.href = "budget.html"
+  else:
+    
+    break
 
 #filtering the boroughs according to their average rent to match with user's budget
 if customer_home_preference == 1:
@@ -172,6 +171,8 @@ for i in range(0,3):
   #print(empty_list[i])
 
 borough = empty_list[0]
+borough2 = empty_list[1]
+borough3 = empty_list[2]
 
 from js import window
 
