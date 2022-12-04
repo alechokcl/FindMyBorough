@@ -74,8 +74,6 @@
               <li class="borough-benefits borough-result">The best restaurants!</li>
             </ul>
           </p>
-          
-
           <!-- Next button -->
 
 
@@ -140,6 +138,14 @@
     // get the bedrooms from the browser storage
     let bedrooms = sessionStorage.getItem("bedrooms");
     console.log(bedrooms)
+
+    // get the other borough from the browser storage
+    let borough_2 = sessionStorage.getItem("borough_2");
+    document.getElementById('borough2').innerHTML = borough_2;
+
+     // get the other borough from the browser storage
+    let borough_3 = sessionStorage.getItem("borough_3");
+    document.getElementById('borough3').innerHTML = borough_3;
    </script>
 
       
