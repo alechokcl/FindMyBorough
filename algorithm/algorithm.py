@@ -141,7 +141,6 @@ final_mark = np.dot(vector,matrix_transpose)
 final_mark = final_mark.T
 final_mark=list(final_mark)
 
-
 x = filtered_customer_list.iloc[:, 0]
 x = pd.DataFrame([x]).T
 x['Points'] = final_mark
@@ -150,32 +149,20 @@ final_list = x_final.head(3)
 final_list = final_list.iloc[:,0:1]
 final_list = final_list.values.tolist()
 
+#converting the list to an utilizable form
 empty_list = []
-for i in range(0,3):
+for i in range(len(final_list)):
   for j in range(0,1):
     final_result = final_list[i][j]
     empty_list.append(final_result)
 
-#print("Top borough to live according to your choices :")
-
-#for i in range(0,1):
-  #print(empty_list[i])
+#printing top 3 boroughs to live in
+print("Top 3 boroughs to live according to your choices:")
+for i in range(len(empty_list)):
+  print(empty_list[i])
 
 borough = empty_list[0]
-borough2 = empty_list[1]
-borough3 = empty_list[2]
-
-'''
-print('<html>')
-print('<script type="text/javascript">')
-print("var borough_2 = PyScript.globals.get('borough2')")
-print("var borough_3 = PyScript.globals.get('borough3')")
-print ('var borough_2 = {{borough2}};'.replace("{{borough2}}", str(borough2)))
-print('sessionStorage.setItem("borough_2", borough_2);')
-print('sessionStorage.setItem("borough_3", borough_3);')
-print('</script>')
-print('</html>')
-'''
+console.log(borough)
 
 from js import window
 
