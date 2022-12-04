@@ -140,13 +140,15 @@
       sessionStorage.setItem("bedrooms", bedrooms);
       console.log(bedrooms);
 
-      if(budget<1000) {
+      if(budget<300) {
         alert('Budget is too low, please enter a higher budget')
-        window.location.href = "budget.html";
+
       }
 
       // redirect
+      else {
       window.location.href = "rank-points.html";
+    }
     }
     </script>
 
