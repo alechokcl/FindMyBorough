@@ -162,7 +162,6 @@ for i in range(len(empty_list)):
   print(empty_list[i])
 
 borough = empty_list[0]
-console.log(borough)
 
 from js import window
 
